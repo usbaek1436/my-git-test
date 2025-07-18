@@ -1,0 +1,17 @@
+name: Python 테스트 자동 실행
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - run: pip install pytest
+    - run: pytest
+
