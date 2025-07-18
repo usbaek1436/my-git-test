@@ -14,5 +14,4 @@ jobs:
 
     - run: pip install pytest
     - run: pytest
-    - run: export PYTHONPATH=${{ github.workspace }}
-
+    - run: PYTHONPATH=. pytest
